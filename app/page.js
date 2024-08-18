@@ -64,15 +64,6 @@ export default function Home() {
   return (
     <Box>
       <Typography variant="h1">Pantry Tracker</Typography>
-      {
-        inventory.forEach((item)=>{
-          return (
-          <Box>
-          {item.name}
-          {item.count}
-          </Box>)
-        })
-      }
     </Box>
   );
 }
