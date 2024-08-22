@@ -68,7 +68,8 @@ export default function Home() {
       display="flex"
       justifyContent="center"
       alignItems="center"
-      gap={2}>
+      gap={2}
+    >
       <Typography variant="h1">Pantry Tracker</Typography>
     </Box>
   );
