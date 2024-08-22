@@ -62,7 +62,13 @@ export default function Home() {
   const handleClose = () => setOpen(false)
 
   return (
-    <Box>
+    <Box
+      width="100vw"
+      height="100vh"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
+      gap={2}>
       <Typography variant="h1">Pantry Tracker</Typography>
     </Box>
   );
