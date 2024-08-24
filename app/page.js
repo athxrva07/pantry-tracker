@@ -85,7 +85,7 @@ export default function Home() {
           gap={3}
         >
           <Typography variant="h6">Add Item</Typography>
-          <Stack width="100%" direction="row"></Stack>
+          <Stack width="100%" direction="row" spacing={2}></Stack>
         </Box>
       </Modal>
 
