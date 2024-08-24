@@ -2,11 +2,11 @@
 import Image from "next/image";
 import {useState, useEffect} from "react";
 import { Firestore } from "firebase/firestore";
-import { Box, Modal, Stack, TextField, Typography } from "@mui/material";
+import { Box, Button, Modal, Stack, TextField, Typography } from "@mui/material";
 
 export default function Home() {
   const [inventory, setInventory] = useState([])
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
   const [itemName, setItemName] = useState("")
 
   const updateInventory = async () => {
@@ -95,7 +95,12 @@ export default function Home() {
             onChange={(e)=>{
               setItemName(e.target.value)
             }}
-            ></TextField>
+            />
+            <Button variant="outlined" onClick={()=>{
+              addItem(itemName)
+              setItemName("")
+              handleClose()
+            }}>Add</Button>
           </Stack>
         </Box>
       </Modal>
