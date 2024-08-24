@@ -2,7 +2,7 @@
 import Image from "next/image";
 import {useState, useEffect} from "react";
 import { Firestore } from "firebase/firestore";
-import { Box, Modal, Typography } from "@mui/material";
+import { Box, Modal, Stack, Typography } from "@mui/material";
 
 export default function Home() {
   const [inventory, setInventory] = useState([])
@@ -71,7 +71,22 @@ export default function Home() {
       gap={2}
     >
       <Modal open={open} onClose={handleClose}>
-        <Box></Box>
+        <Box 
+          position="absolute" 
+          top="50%" left="50%" 
+          transform="translate(-50%,-50%)" 
+          width={400}
+          bgcolor="white"
+          border="2px solid #000"
+          boxShadow={24}
+          p={4}
+          display="flex"
+          flexDirection="column"
+          gap={3}
+        >
+          <Typography variant="h6">Add Item</Typography>
+          <Stack width="100%" direction="row"></Stack>
+        </Box>
       </Modal>
 
       <Typography variant="h1">Pantry Tracker</Typography>
