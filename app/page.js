@@ -66,6 +66,7 @@ export default function Home() {
       width="100vw"
       height="100vh"
       display="flex"
+      flexDirection="column"
       justifyContent="center"
       alignItems="center"
       gap={2}
@@ -105,7 +106,17 @@ export default function Home() {
         </Box>
       </Modal>
 
-      <Typography variant="h1">Pantry Tracker</Typography>
+      <Button variant="contained" onClick={()=>{
+        handleOpen()
+      }}>Add New Item</Button>
+
+      <Box border="1px solid #333">
+        <Box 
+        width="800px"
+        height="100px"
+        bgcolor="#ADD8E6"
+        ></Box>
+      </Box>
     </Box>
   );
 }
