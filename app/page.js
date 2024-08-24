@@ -111,11 +111,11 @@ export default function Home() {
       }}>Add New Item</Button>
 
       <Box border="1px solid #333">
-        <Box 
-        width="800px"
-        height="100px"
-        bgcolor="#ADD8E6"
-        ></Box>
+        <Box width="800px" height="100px" bgcolor="#ADD8E6" display="flex" alignItems="center" justifyContent="center">
+          <Typography variant="h2" color="#333">
+            Pantry Items
+          </Typography>
+        </Box>
       </Box>
     </Box>
   );
