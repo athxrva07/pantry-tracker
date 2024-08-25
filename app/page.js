@@ -133,7 +133,7 @@ export default function Home() {
              minHeight="150px"
              display="flex"
              alignItems="center"
-             justifyContent="center"
+             justifyContent="space-between"
              bgcolor="#f0f0f0"
              padding={5}
            >
@@ -141,7 +141,10 @@ export default function Home() {
               {name.charAt(0).toUpperCase() + name.slice(1)}
             </Typography>
 
-            
+            <Typography variant="h3" color="#333" textAlign="center">
+              {quantity}
+            </Typography>
+
            </Box>
           ))}
       </Stack>
