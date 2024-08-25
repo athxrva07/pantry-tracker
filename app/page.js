@@ -1,8 +1,9 @@
 "use client"
 import Image from "next/image";
 import {useState, useEffect} from "react";
-import { Firestore } from "firebase/firestore";
+import { firestore } from "@/firebase";
 import { Box, Button, Modal, Stack, TextField, Typography } from "@mui/material";
+import { collection, deleteDoc, doc, getDoc, getDocs, query, setDoc } from "firebase/firestore";
 
 export default function Home() {
   const [inventory, setInventory] = useState([])
@@ -125,9 +126,24 @@ export default function Home() {
         </Box>
       </Box>
       <Stack width="800px" height="300px" spacing={2} overflow="auto">
-        {
-          
-        }
+        {inventory.map(({name, quantity})=>(
+           <Box 
+             key={name} 
+             width="100%"
+             minHeight="150px"
+             display="flex"
+             alignItems="center"
+             justifyContent="center"
+             bgcolor="#f0f0f0"
+             padding={5}
+           >
+            <Typography variant="h3" color="#333" textAlign="center">
+              {name.charAt(0).toUpperCase() + name.slice(1)}
+            </Typography>
+
+            
+           </Box>
+          ))}
       </Stack>
     </Box>
   );
