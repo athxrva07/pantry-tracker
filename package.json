@@ -12,13 +12,13 @@
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
     "@mui/material": "^5.16.7",
-    "@next/swc-darwin-arm64": "^14.2.6",
     "firebase": "^10.13.0",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@next/swc-darwin-arm64": "^15.0.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.5"
   }
